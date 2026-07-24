@@ -26,9 +26,12 @@ app = FastAPI(
 
 
 
+from fastapi.middleware.cors import CORSMiddleware
+import re
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://finance-mate-one.vercel.app"],
+    allow_origin_regex=r"https://finance-mate.*\.vercel\.app",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
