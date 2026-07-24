@@ -49,10 +49,10 @@ function App() {
     }
 
     try {
-      const response = await axios.post(
-        "http://127.0.0.1:8000/analyze-finance",
-        form
-      );
+const response = await axios.post(
+  `${import.meta.env.VITE_API_URL}/analyze-finance`,
+  form
+);
 
       setResult(response.data);
     } catch (error) {
