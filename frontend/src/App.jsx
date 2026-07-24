@@ -73,10 +73,9 @@ const response = await axios.post(
       formData.append("file", file);
 
       const response = await axios.post(
-        "http://127.0.0.1:8000/upload-file",
-        formData
-      );
-
+      `${import.meta.env.VITE_API_URL}/upload-file`,
+      formData
+);
       setUploadResult(response.data);
     } catch (error) {
       console.log(error);
