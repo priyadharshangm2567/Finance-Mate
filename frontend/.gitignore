@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.pyc
+
+# Environment
+.env
+
+# Model files (optional)
+# *.pkl
+
+# React
+node_modules/
+dist/
+
+# Uploaded files
+uploaded_file
